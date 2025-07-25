@@ -1,7 +1,7 @@
 
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home.jsx'
+import Welcome from './Components/welcome.jsx'
 import Project from './Components/Project.jsx'
 import Layout from './Components/Layout.jsx'
 import Product from './Components/Product.jsx'
@@ -13,9 +13,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="welcome" element={<Welcome />} /> 
           <Route path="project" element={<Project />} />
-          <Route path="product" element={<Product/>} />
-          <Route path='payment' element={<Payment/>} />
+          <Route path="product" element={<Product />} />
+          <Route path="payment" element={<Payment />} /> 
         </Route>
       </Routes>
     </BrowserRouter>
@@ -23,5 +24,6 @@ const App = () => {
 }
 
 export default App
+
 
 

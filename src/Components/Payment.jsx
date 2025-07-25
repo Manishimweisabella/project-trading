@@ -25,7 +25,7 @@ const Payment = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6 text-center">
       <h2 className="text-xl font-bold">Payment Cards</h2>
       <button
         onClick={makePayment}

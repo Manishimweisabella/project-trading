@@ -30,8 +30,9 @@ const Navbar = () => {
    </div>
 <div className="flex justify-center p-4 bg-blue-800">
         <ul className="flex gap-6 font-semibold text-lg">
-          <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
-          <li><Link to="/project" className="hover:text-gray-200">Project</Link></li>
+           <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
+          <li><Link to="/welcome" className='hover:text-gray-200'>welcome</Link></li>
+         <li><Link to="/project" className="hover:text-gray-200">Project</Link></li>
           <li><Link to="/product" className="hover:text-gray-200">Product</Link></li>
           <li><Link to="/payment" className="hover:text-gray-200">Payment</Link></li>
         </ul>
