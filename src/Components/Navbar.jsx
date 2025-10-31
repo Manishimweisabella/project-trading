@@ -7,18 +7,22 @@ const Navbar = () => {
   <div className="flex items-center justify-around px-6 py-4 border-b border-blue-700">
     
    
-    <div className="flex items-center gap-4">
-      <img src="/Image/logo.png" alt="logo" className="w-12 h-12 rounded-full" />
-      <div>
-        <h1 className="text-xl font-bold">Trading Online</h1>
-      </div>
-    </div>
+    <div className="flex flex-col items-center gap-2">
+  <img src="/Image/logo.png" alt="logo" className="w-12 h-12 rounded-full" />
+  <h1 className="text-xl">Trading Online</h1>
+</div>
+
+
+   <a
+  href="https://www.google.com/maps?q=Kigali,Rwanda"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center cursor-pointer">
+  <img src="/Image/location.png" alt="location" className="w-10 h-10" />
+  <p className="text-xl font-bold">Location</p>
+</a>
 
    
-    <div className="flex items-center gap-2">
-      <img src="/Image/location.png" alt="location" className="w-10 h-10" />
-      <p className="text-xl font-bold">Location</p>
-    </div>
 
     
     <div className="flex items-center gap-2">
@@ -35,6 +39,7 @@ const Navbar = () => {
          <li><Link to="/project" className="hover:text-gray-200">Project</Link></li>
           <li><Link to="/product" className="hover:text-gray-200">Product</Link></li>
           <li><Link to="/payment" className="hover:text-gray-200">Payment</Link></li>
+          <li><Link to="/productDetail"className='hover:text-gray-200'>ProductDetail</Link></li>
         </ul>
       </div>
       </div>

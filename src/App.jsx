@@ -6,6 +6,7 @@ import Project from './Components/Project.jsx'
 import Layout from './Components/Layout.jsx'
 import Product from './Components/Product.jsx'
 import Payment from './Components/Payment.jsx'
+import ProductDetail from './Components/ProductDetail.jsx'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="project" element={<Project />} />
           <Route path="product" element={<Product />} />
           <Route path="payment" element={<Payment />} /> 
+          <Route path='productDetail' element={<ProductDetail/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
