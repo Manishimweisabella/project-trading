@@ -2,6 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const ProductDetail = () => {
   const { id } = useParams();
+ 
+  
   const navigate = useNavigate();
 
   const products = [
@@ -11,23 +13,32 @@ const ProductDetail = () => {
     { id: 4, name: 'Leather Jacket', image: '/Image/jacket.png', price: '25000 Frw', description: 'Stylish leather jacket for a classic look.' },
   ];
 
-  const product = products.find((p) => p.id === parseInt(id));
 
-  if (!product) return <div className="text-center mt-10 text-red-500">Product not found.</div>;
+  const product = products.find(p => p.id === Number(id));
+
+  if (product === undefined) {
+    return (
+      <div className="text-center mt-10 text-red-500 text-2xl font-bold">
+        Product not found
+      </div>
+    );
+  }
 
   const handleAddToCart = () => {
     alert(`${product.name} added to cart!`);
-    navigate('/'); 
+    navigate('/');
   };
 
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center items-center p-6">
       <div className="bg-white rounded-2xl shadow-lg max-w-2xl p-8 text-center">
+        
         <img
           src={product.image}
           alt={product.name}
           className="w-72 h-72 object-cover mx-auto rounded-xl"
         />
+
         <h2 className="text-3xl font-bold mt-4 text-gray-800">{product.name}</h2>
         <p className="text-gray-600 mt-2">{product.description}</p>
         <p className="text-2xl font-semibold text-green-700 mt-3">{product.price}</p>
@@ -44,7 +55,3 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
-
-
-
-    

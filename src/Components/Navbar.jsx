@@ -26,7 +26,7 @@ const Navbar = () => {
 
     
     <div className="flex items-center gap-2">
-      <img src="/Image/calling.png" alt="calling" className="w-10 h-10" />
+      <img src="/Image/calling.png"  alt="calling" className="w-10 h-10 " />
       <h6 className="text-xl font-bold">
         Call: <span>0793679835</span>
       </h6>
@@ -40,6 +40,7 @@ const Navbar = () => {
           <li><Link to="/product" className="hover:text-gray-200">Product</Link></li>
           <li><Link to="/payment" className="hover:text-gray-200">Payment</Link></li>
           <li><Link to="/productDetail"className='hover:text-gray-200'>ProductDetail</Link></li>
+          <li><Link  to="/productsDetails" className='hover:text-gray-200'>ProductsDetails</Link></li>
         </ul>
       </div>
       </div>

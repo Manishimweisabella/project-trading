@@ -6,7 +6,7 @@ const Product = () => {
     {
       id: 1,
       name: 'Classic T-Shirt',
-      image: 'public/Image/T-shirt.png', 
+      image: '/Image/T-shirt.png', 
       price: '10000 frw',
     },
     {

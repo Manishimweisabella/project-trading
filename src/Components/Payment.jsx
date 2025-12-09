@@ -11,13 +11,13 @@ const Payment = () => {
       customer: {
         email: "manishimweisabella@gmail.com",
         phonenumber: "250793679835",
-        name: "isabella",
+        name: " Manishimwe Isabella",
       },
       callback: (response) => {
         console.log("Payment callback:", response);
       },
       customizations: {
-        title: "Online Payment",
+        title: "Online of services",
         description: "Payment of services",
         logo: "/Image/logo.png",
       },
