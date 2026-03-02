@@ -3,56 +3,51 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-center py-10">
-      <div className="text-sm px-10 font-bold flex flex-col items-center">
+    <footer className="bg-black text-white py-10">
+      <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
+
         <img
           src="/Image/logo.png"
           alt="Logo"
-          className="w-16 h-16 rounded-full mb-4 mt-4"
+          className="w-16 h-16 rounded-full mb-4 object-cover"
         />
 
-        <h3 className="text-xl font-semibold text-white">Trading Online</h3>
+        <h3 className="text-xl font-semibold">Trading Online</h3>
 
-        <p className="text-gray-300 mt-2">&copy; 2025. All rights reserved.</p>
-        <p className="text-gray-300">Created by Manishimwe Isabella</p>
+        <p className="text-gray-400 mt-2 text-sm">
+          &copy; 2025. All rights reserved.
+        </p>
+        <p className="text-gray-400 text-sm">
+          Created by Manishimwe Isabella
+        </p>
 
-        <div className="flex gap-5 text-white text-2xl mt-4">
-          <a
-            href="mailto:manishimweisabella@gmail.com"
-            className="hover:text-red-400 transition"
-          >
-            <MdEmail />
-          </a>
+       
+        <div className="flex gap-6 mt-6">
 
-          <a
-            href="https://google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition"
-          >
-            <FaGoogle />
-          </a>
+          
+          {[
+            { icon: <MdEmail />, link: "mailto:manishimweisabella@gmail.com" },
+            { icon: <FaGoogle />, link: "https://google.com" },
+            { icon: <FaGithub />, link: "https://github.com/manishimweisabella" },
+            { icon: <FaFacebook />, link: "https://www.facebook.com/nickbella.isabella" },
+          ].map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 flex items-center justify-center 
+                         rounded-full bg-blue-600 text-white text-xl
+                         hover:bg-blue-500 hover:scale-110 
+                         transition duration-300"
+            >
+              {item.icon}
+            </a>
+          ))}
 
-          <a
-            href="https://github.com/manishimweisabella"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300 transition"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://www.facebook.com/nickbella.isabella"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition"
-          >
-            <FaFacebook />
-          </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -21,12 +21,14 @@ const Product = () => {
       image: '/Image/running shoes.png',
       price: '15000 frw',
     },
-    {
-      id: 4,
-      name: 'Leather Jacket',
-      image: '/Image/jackect.png/',
-      price: '25000frw',
-    },
+    
+   {
+  id: 4,
+  name: 'Leather Jacket',
+  image: '/Image/jacket.png',
+  price: 25000, 
+}
+ 
   ];
 
   return (
